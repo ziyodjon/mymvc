@@ -2,7 +2,7 @@
 return [
     '' => [
         'controller' => 'main',
-        'action' => 'test',
+        'action' => 'first',
     ],
 
     'admin/logins' => [
