@@ -2,16 +2,16 @@
 return [
     '' => [
         'controller' => 'main',
-        'action' => 'first',
+        'action' => 'index',
     ],
 
-    'admin/logins' => [
-        'controller' => 'admin',
-        'action' => 'logins',
+    'account/login' => [
+        'controller' => 'account',
+        'action' => 'login',
     ],
 
-    'admin/register' => [
-        'controller' => 'admin',
+    'account/register' => [
+        'controller' => 'account',
         'action' => 'register',
     ],
 
