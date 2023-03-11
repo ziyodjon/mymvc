@@ -1,12 +1,13 @@
 <?php
 namespace aplication\controllers;
 
-class AdminController{
-    public function loginsAction(){
-        echo "Login page";
+use aplication\core\Controller;
+class AccountController extends Controller{
+    public function loginAction(){
+        $this->view->render('Login page');
     }
 
     public function registerAction(){
-        echo "Register page";
+        $this->view->render('Register page');
     }
 }
