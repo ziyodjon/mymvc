@@ -1,6 +1,6 @@
 <?php
 namespace aplication\core;
-
+use aplication\core\View;
 class Router {
 
     protected $routes = [];
@@ -37,13 +37,13 @@ class Router {
                     $controller = new $controller($this->params);
                     $controller->$action();
                 }else{
-                    echo "Не найден такой экшен";
+                    View::errorCode(404);
                 }
             }else{
-                echo 'Такой класс не найден';
+                View::errorCode(404);
             }
         }else{
-            echo "Маршрут не найден";
+            View::errorCode(404);
         }
     }
 }
