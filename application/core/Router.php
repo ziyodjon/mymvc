@@ -1,6 +1,7 @@
 <?php
 namespace aplication\core;
 use aplication\core\View;
+
 class Router {
 
     protected $routes = [];

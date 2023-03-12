@@ -1,10 +1,10 @@
 <?php
-namespace application\lib;
+namespace aplication\lib;
 
 class Db{
 
     public function __construct(){
-        $config = "application/config/db.php";
+        $config = "aplication/config/db.php";
         debug($config);
     }
 }
