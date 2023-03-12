@@ -1,7 +1,7 @@
 <?php
-namespace aplication\controllers;
+namespace application\controllers;
 
-use aplication\core\Controller;
+use application\core\Controller;
 class AccountController extends Controller{
     public function loginAction(){
         $this->view->render('Login page');

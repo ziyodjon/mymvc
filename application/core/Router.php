@@ -1,13 +1,13 @@
 <?php
-namespace aplication\core;
-use aplication\core\View;
+namespace application\core;
+use application\core\View;
 
 class Router {
 
     protected $routes = [];
     protected $params = [];
     public function __construct(){
-        $arr = require 'aplication/config/routes.php';
+        $arr = require 'application/config/routes.php';
         foreach($arr as $key => $val){
             $this->add($key, $val);
         }
@@ -31,7 +31,7 @@ class Router {
 
     public function run(){
         if ($this->match()) {
-            $controller = "aplication\controllers\\".ucfirst($this->params['controller'])."Controller";
+            $controller = "application\controllers\\".ucfirst($this->params['controller'])."Controller";
             if(class_exists($controller)){
                 $action = $this->params['action']."Action";
                 if(method_exists($controller,$action)){

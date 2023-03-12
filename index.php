@@ -1,6 +1,6 @@
 <?php
-require "aplication/lib/Dev.php";
-//use aplication\core\Router;
+require "application/lib/Dev.php";
+//use application\core;
 
 // If class file exists Autoload all classes here
 spl_autoload_register(function ($class) {
@@ -10,6 +10,6 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$router = new aplication\core\Router();
+$router = new application\core\Router();
 
 $router->run();

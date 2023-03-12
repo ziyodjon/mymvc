@@ -1,7 +1,7 @@
 <?php
-namespace aplication\core;
-use aplication\core\View;
-use aplication\lib\Db;
+namespace application\core;
+use application\core\View;
+use application\lib\Db;
 
 abstract class Controller{
     public $route;

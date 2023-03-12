@@ -1,17 +1,18 @@
 <?php
-namespace aplication\controllers;
+namespace application\controllers;
 
-use aplication\core\Controller;
-use aplication\lib\Db;
+use application\core\Controller;
+use application\lib\Db;
 
 class MainController extends Controller{
     public function indexAction(){
         $db = new Db();
+        $res = $db->query('SELECT name FROM users WHERE id = 1');
         $vars = [
             'name' => 'Ziyodulla',
             'surname' => 'Ibragimov',
         ];
 
-        $this->view->render('Main page',$vars);
+        $this->view->render('Main Page',$vars);
     }
 }

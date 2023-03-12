@@ -1,5 +1,5 @@
 <?php
-namespace aplication\core;
+namespace application\core;
 
 class View{
     public $path;
@@ -12,14 +12,14 @@ class View{
     public function render($title, $vars = []){
         ob_start();
         extract($vars);
-        require "aplication/views/".$this->path;
+        require "application/views/".$this->path;
         $content = ob_get_clean();
-        include "aplication/views/layouts/". $this->layout.".php";
+        include "application/views/layouts/". $this->layout.".php";
     }
 
     static function errorCode($code){
         http_response_code($code);
-        require_once "aplication/views/errors/".$code.".php";
+        require_once "application/views/errors/".$code.".php";
         exit;
     }
 }
