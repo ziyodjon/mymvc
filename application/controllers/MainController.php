@@ -6,13 +6,10 @@ use application\lib\Db;
 
 class MainController extends Controller{
     public function indexAction(){
-        $db = new Db();
-        $res = $db->query('SELECT name FROM users WHERE id = 1');
+        $news = $this->model->getNews();
         $vars = [
-            'name' => 'Ziyodulla',
-            'surname' => 'Ibragimov',
+            'news'=>$news,
         ];
-
         $this->view->render('Main Page',$vars);
     }
 }
